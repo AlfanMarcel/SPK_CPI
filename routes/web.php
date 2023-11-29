@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\alternatifController;
+use App\Http\Controllers\criteriaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+
+//alternatif
+Route::get('/alternatifs', [alternatifController::class, 'index']);
+
+//criteria
+Route::get('/criterias', [criteriaController::class, 'index']);

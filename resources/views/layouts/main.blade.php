@@ -144,7 +144,7 @@
                     <div class="sidebar-brand">
                         {{-- <img src="{{ asset('/') }}assets/img/avatar/online-library.png" alt=""
                             width="35"> --}}
-                        <a href="index.html" class="" style="font-size: 12px">Compiste Performance Index</a>
+                        <a href="index.html" class="" style="">CPI</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html">CPI</a>
@@ -167,7 +167,7 @@
             </div>
             <footer class="main-footer">
                 <div class="text-center">
-                    Copyright &copy; 2018 <div class="bullet"></div> E-PERPUS
+                    Copyright &copy; 2023 <div class="bullet"></div> Composite Performance Index
                 </div>
             </footer>
         </div>

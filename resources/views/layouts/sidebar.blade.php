@@ -5,17 +5,17 @@
     <li class="menu-header">Data</li>
     {{-- <li class="{{ Request::is('admin') ? 'active' : '' }}"><a class="nav-link" href="/admin"><i class="fas fa-user"></i>
             <span>Admin</span></a></li> --}}
-    <li class="nav-item dropdown {{ Request::is('books') || Request::is('transactions') ? 'active' : '' }}">
+    <li class="nav-item dropdown {{ Request::is('alternatifs') || Request::is('criteria') ? 'active' : '' }}">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-user"></i>
             <span>Alternatif</span></a>
         <ul class="dropdown-menu">
-            <li class="{{ Request::is('books') ? 'active' : '' }}"><a class="nav-link" href="/books">
+            <li class="{{ Request::is('alternatifs') ? 'active' : '' }}"><a class="nav-link" href="/alternatifs">
                     Alternatif</a></li>
-            <li class="{{ Request::is('transactions') ? 'active' : '' }}"><a class="nav-link" href="/transactions">
+            <li class="{{ Request::is('criterias') ? 'active' : '' }}"><a class="nav-link" href="">
                     Nilai Alternatif</a></li>
         </ul>
     </li>
-    <li class="{{ Request::is('users') ? 'active' : '' }}"><a class="nav-link" href="/users"><i
+    <li class="{{ Request::is('criterias') ? 'active' : '' }}"><a class="nav-link" href="/criterias"><i
                 class="fas fa-th-large"></i>
             <span>Kriteria</span></a></li>
     <li class="{{ Request::is('users') ? 'active' : '' }}"><a class="nav-link" href="/users"><i
