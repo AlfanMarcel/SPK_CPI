@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('cpi_evaluations', function (Blueprint $table) {
             $table->foreignIdFor(Alternatif::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Criteria::class)->constrained()->cascadeOnDelete();
+            $table->float('value');
             $table->timestamps();
         });
     }

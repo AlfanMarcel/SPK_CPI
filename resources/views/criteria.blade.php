@@ -31,23 +31,25 @@
                                         Name
                                     </th>
                                     <th>Type</th>
-                                    <th>Wight</th>
+                                    <th>Weight</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="text-center">
-                                    <td>1</td>
-                                    <td>Kriteria 1</td>
-                                    <td>Benefit/Cost</td>
-                                    <td>0.3</td>
-                                    <td>
-                                        <a href="" class="text-warning mr-2"><i class="fas fa-edit"
-                                                style="font-size: 20px"></i></a>
-                                        <a href="" class="text-danger"><i class="fas fa-trash-alt"
-                                                style="font-size: 20px"></i></a>
-                                    </td>
-                                </tr>
+                                @foreach ($criterias as $criteria)
+                                    <tr class="text-center">
+                                        <td>{{ $criteria->id }}</td>
+                                        <td>{{ $criteria->name }}</td>
+                                        <td>{{ $criteria->type }}</td>
+                                        <td>{{ $criteria->weight }}</td>
+                                        <td>
+                                            <a href="" class="text-warning mr-2"><i class="fas fa-edit"
+                                                    style="font-size: 20px"></i></a>
+                                            <a href="" class="text-danger"><i class="fas fa-trash-alt"
+                                                    style="font-size: 20px"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 {{-- @foreach ($admins as $admin)
                                 <tr>
                                     <td>
