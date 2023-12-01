@@ -1,6 +1,6 @@
 <ul class="sidebar-menu">
     <li class="menu-header">Dashboard</li>
-    <li class="{{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="/dashboard"><i class="fas fa-fire"></i>
+    <li class="{{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="/"><i class="fas fa-fire"></i>
             <span>Dashboard</span></a></li>
     <li class="menu-header">Data</li>
     {{-- <li class="{{ Request::is('admin') ? 'active' : '' }}"><a class="nav-link" href="/admin"><i class="fas fa-user"></i>
@@ -11,7 +11,7 @@
         <ul class="dropdown-menu">
             <li class="{{ Request::is('alternatifs') ? 'active' : '' }}"><a class="nav-link" href="/alternatifs">
                     Alternatif</a></li>
-            <li class="{{ Request::is('criterias') ? 'active' : '' }}"><a class="nav-link" href="">
+            <li class="{{ Request::is('') ? 'active' : '' }}"><a class="nav-link" href="">
                     Nilai Alternatif</a></li>
         </ul>
     </li>
