@@ -18,7 +18,7 @@
     <li class="{{ Request::is('criterias') ? 'active' : '' }}"><a class="nav-link" href="/criterias"><i
                 class="fas fa-th-large"></i>
             <span>Kriteria</span></a></li>
-    <li class="{{ Request::is('users') ? 'active' : '' }}"><a class="nav-link" href="/users"><i
+    <li class="{{ Request::is('/calculate') ? 'active' : '' }}"><a class="nav-link" href="/calculate"><i
                 class="fas fa-calculator"></i>
             <span>Perhitungan</span></a></li>
 </ul>

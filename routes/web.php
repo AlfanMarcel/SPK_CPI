@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\alternatifController;
+use App\Http\Controllers\CpiController;
 use App\Http\Controllers\criteriaController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::get('/alternatifs', [alternatifController::class, 'index']);
 
 //criteria
 Route::get('/criterias', [criteriaController::class, 'index']);
+
+//perhitungan
+Route::get('/calculate', [CpiController::class, 'index']);
