@@ -18,7 +18,7 @@
                                 <tr class="text-center">
                                     <th></th>
                                     @foreach (array_keys(reset($array)) as $criteria)
-                                        <th>K{{ $criteria }}</th>
+                                        <th>C{{ $criteria }}</th>
                                     @endforeach
                                 </tr>
                             </thead>

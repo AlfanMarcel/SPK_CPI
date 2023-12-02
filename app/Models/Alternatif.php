@@ -13,6 +13,6 @@ class Alternatif extends Model
 
     public function criterias(): BelongsToMany
     {
-        return $this->belongsToMany(Criteria::class, 'cpi_evaluations');
+        return $this->belongsToMany(Criteria::class, 'cpi_evaluations')->withPivot('value');
     }
 }

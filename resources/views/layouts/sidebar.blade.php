@@ -11,7 +11,7 @@
         <ul class="dropdown-menu">
             <li class="{{ Request::is('alternatifs') ? 'active' : '' }}"><a class="nav-link" href="/alternatifs">
                     Alternatif</a></li>
-            <li class="{{ Request::is('') ? 'active' : '' }}"><a class="nav-link" href="">
+            <li class="{{ Request::is('avalue') ? 'active' : '' }}"><a class="nav-link" href="/avalue">
                     Nilai Alternatif</a></li>
         </ul>
     </li>
