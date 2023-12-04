@@ -10,7 +10,7 @@ class alternatifController extends Controller
     //
     public function index()
     {
-        $alternatifs = Alternatif::all();
+        $alternatifs = Alternatif::paginate(10);
         return view('alternatif', compact('alternatifs'));
     }
 }

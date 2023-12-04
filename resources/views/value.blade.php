@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header">A1</div>
+                <div class="card-header">{{ $values->name }}</div>
                 <div class="card-body">
                     <div class="row">
                         @foreach ($values->criterias as $criteria)

@@ -76,6 +76,7 @@
                             @endforeach --}}
                             </tbody>
                         </table>
+                        {{ $criterias->links() }}
                     </div>
                 </div>
             </div>

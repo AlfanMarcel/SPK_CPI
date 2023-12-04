@@ -72,6 +72,7 @@
                                 @endforeach --}}
                             </tbody>
                         </table>
+                        {{ $alternatifs->links() }}
                     </div>
                 </div>
             </div>
