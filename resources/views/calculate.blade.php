@@ -9,7 +9,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="" class="btn btn-primary">Tambah</a>
+                    <h4>Nilai Perbandingan</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

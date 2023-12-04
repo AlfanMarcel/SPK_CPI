@@ -8,18 +8,29 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header">{{ $values->name }}</div>
-                <div class="card-body">
-                    <div class="row">
-                        @foreach ($values->criterias as $criteria)
-                            <div class="col-3 mb-3">
-                                <label for="" class="form-label">{{ $criteria->name }}</label>
-                                <input type="number" class="form-control" id="" min="0"
-                                    name="{{ $criteria->id }}" max="100" value="{{ $criteria->pivot->value }}">
-                            </div>
-                        @endforeach
-                    </div>
+                <div class="card-header">
+                    <h4>{{ $values->name }}</h4>
                 </div>
+                <div class="card-body">
+                    <form action="/edit_value/{{ $values->id }}" method="post">
+                        @csrf
+                        @method('PUT')
+                        <div class="row">
+                            @foreach ($values->criterias as $criteria)
+                                <div class="col-3 mb-3">
+                                    <label for="" class="form-label"
+                                        style="font-weight: bold">{{ $criteria->name }}</label>
+                                    <input type="number" class="form-control" id="" min="0"
+                                        name="{{ $criteria->id }}" max="100" value="{{ $criteria->pivot->value }}">
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="card-footer text-right">
+                            <button class="btn btn-success" type="submit">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

@@ -30,6 +30,7 @@ Route::get('/criterias', [criteriaController::class, 'index']);
 //nilai
 Route::get('/avalue', [AValueController::class, 'index']);
 Route::get('/value/{id}', [AValueController::class, 'showValue']);
+Route::put('/edit_value/{id}', [AValueController::class, 'edit']);
 
 //perhitungan
 Route::get('/calculate', [CpiController::class, 'index']);
