@@ -25,8 +25,9 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="card-footer text-right">
+                        <div class="card-footer d-flex justify-content-between">
                             <button class="btn btn-success" type="submit">Simpan</button>
+                            <a href="/value/{{ $values->id + 1 }}" class="btn btn-primary">Next</a>
                         </div>
                     </form>
                 </div>
