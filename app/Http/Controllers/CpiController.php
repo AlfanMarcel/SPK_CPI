@@ -28,11 +28,22 @@ class CpiController extends Controller
 
         $criterias = Criteria::all();
         $alternatifs = Alternatif::all();
+
+        // get matrix
         $array = $this->service->toArray($matriks);
+
+        $type = DB::table('criterias')
+            ->select('id', 'type')
+            ->get()
+            ->toArray();
+
+        // normalize matrix
+        $normalize = $this->service->normalize($array, $type);
         return view('calculate', [
             'criterias' => $criterias,
             'alternatifs' => $alternatifs,
             'array' => $array,
+            'normalisasi' => $normalize,
         ]);
     }
 }
