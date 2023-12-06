@@ -55,5 +55,12 @@ class CpiService
         foreach ($weight as $w) {
             $weights[$w->id] = $w->weight;
         }
+
+        for ($i = 1; $i <= count($matrix[1]); $i++) {
+            for ($j = 1; $j <= count($matrix); $j++) {
+                $matrix[$j][$i] = round($matrix[$j][$i] * $weights[$i], 3);
+            }
+        }
+        return $matrix;
     }
 }
