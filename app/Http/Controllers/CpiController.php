@@ -47,12 +47,14 @@ class CpiController extends Controller
             ->toArray();
 
         $weighting = $this->service->weighting($normalize, $weight);
+        $sum = $this->service->sum($weighting);
         return view('calculate', [
             'criterias' => $criterias,
             'alternatifs' => $alternatifs,
             'array' => $array,
             'normalisasi' => $normalize,
             'weighting' => $weighting,
+            'sum' => $sum,
         ]);
     }
 }

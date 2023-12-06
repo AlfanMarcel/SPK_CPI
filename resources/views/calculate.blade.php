@@ -99,5 +99,34 @@
             </div>
         </div>
     </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>Perhitungan index gabungan dan Peringkat Alternatif</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="table-1">
+                        <thead>
+                            <tr class="text-center">
+                                <th></th>
+                                <th>SUM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($sum as $alternative => $criteriaValues)
+                            <tr class="text-center">
+                                <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
+                                @foreach ($criteriaValues as $value)
+                                <td>{{ $value }}</td>
+                                @endforeach
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
