@@ -47,4 +47,13 @@ class CpiService
 
         return $matrix;
     }
+
+    public function weighting(array $matrix, array $weight)
+    {
+        $weights = [];
+
+        foreach ($weight as $w) {
+            $weights[$w->id] = $w->weight;
+        }
+    }
 }

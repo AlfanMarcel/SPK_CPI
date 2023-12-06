@@ -39,6 +39,15 @@ class CpiController extends Controller
 
         // normalize matrix
         $normalize = $this->service->normalize($array, $type);
+
+        //wwighting
+        $weight = DB::table('criterias')
+            ->select('id', 'weight')
+            ->get()
+            ->toArray();
+
+        $weighting = $this->service->weighting($normalize, $weight);
+
         return view('calculate', [
             'criterias' => $criterias,
             'alternatifs' => $alternatifs,
