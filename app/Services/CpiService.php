@@ -66,6 +66,7 @@ class CpiService
 
     public function sum(array $matrix)
     {
+        // sum
         $sum = [];
         for ($i = 1; $i <= count($matrix); $i++) {
             $sum[$i][1] = "A" . $i;
@@ -74,6 +75,26 @@ class CpiService
                 $sum[$i][2] += round($matrix[$i][$j], 3);
             }
         }
+
+        // sorting
+        for ($i = 1; $i <= count($sum); $i++) {
+            $val = $sum[$i][2];
+            $a = $sum[$i][1];
+            $j = $i - 1;
+            while ($j >= 1 && $sum[$j][2] < $val) {
+                $sum[$j + 1][2] = $sum[$j][2];
+                $sum[$j + 1][1] = $sum[$j][1];
+                $j--;
+            }
+            $sum[$j + 1][2] = $val;
+            $sum[$j + 1][1] = $a;
+        }
+
+        //rank
+        for ($i = 1; $i <= count($matrix); $i++) {
+            $sum[$i][3] = $i;
+        }
+
         return $sum;
     }
 }

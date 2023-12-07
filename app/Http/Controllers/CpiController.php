@@ -48,6 +48,7 @@ class CpiController extends Controller
 
         $weighting = $this->service->weighting($normalize, $weight);
         $sum = $this->service->sum($weighting);
+
         return view('calculate', [
             'criterias' => $criterias,
             'alternatifs' => $alternatifs,
