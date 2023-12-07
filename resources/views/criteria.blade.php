@@ -43,8 +43,8 @@
                                         <td>{{ $criteria->type }}</td>
                                         <td>{{ $criteria->weight }}</td>
                                         <td>
-                                            <a href="" class="text-warning mr-2"><i class="fas fa-edit"
-                                                    style="font-size: 20px"></i></a>
+                                            <a href="/criteria/{{ $criteria->id }}" class="text-warning mr-2"><i
+                                                    class="fas fa-edit" style="font-size: 20px"></i></a>
                                             <a href="" class="text-danger"><i class="fas fa-trash-alt"
                                                     style="font-size: 20px"></i></a>
                                         </td>

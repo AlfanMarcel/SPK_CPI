@@ -26,6 +26,8 @@ Route::get('/alternatifs', [alternatifController::class, 'index']);
 
 //criteria
 Route::get('/criterias', [criteriaController::class, 'index']);
+Route::get('/criteria/{id}', [criteriaController::class, 'edit']);
+Route::put('/edit_criteria/{id}', [criteriaController::class, 'update']);
 
 //nilai
 Route::get('/avalue', [AValueController::class, 'index']);

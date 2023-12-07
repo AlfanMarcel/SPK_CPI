@@ -64,12 +64,19 @@ class CpiService
         return $matrix;
     }
 
-    public function sum(array $matrix)
+    public function sum(array $matrix, array $name)
     {
+
+        $names = [];
+
+        foreach ($name as $n) {
+            $names[$n->id] = $n->name;
+        }
+
         // sum
         $sum = [];
         for ($i = 1; $i <= count($matrix); $i++) {
-            $sum[$i][1] = "A" . $i;
+            $sum[$i][1] = $names[$i];
             $sum[$i][2] = 0;
             for ($j = 1; $j <= count($matrix[1]); $j++) {
                 $sum[$i][2] += round($matrix[$i][$j], 3);

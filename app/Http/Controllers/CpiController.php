@@ -47,7 +47,14 @@ class CpiController extends Controller
             ->toArray();
 
         $weighting = $this->service->weighting($normalize, $weight);
-        $sum = $this->service->sum($weighting);
+
+        //sum and ranking
+        $name = DB::table('alternatifs')
+            ->select('id', 'name')
+            ->get()
+            ->toArray();
+
+        $sum = $this->service->sum($weighting, $name);
 
         return view('calculate', [
             'criterias' => $criterias,

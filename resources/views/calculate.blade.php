@@ -10,29 +10,36 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Nilai Perbandingan</h4>
+                    <div class="card-header-action">
+                        <a data-collapse="#nilai-perbandingan" class="btn btn-icon btn-info" href="#"><i
+                                class="fas fa-minus"></i></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="table-1">
-                            <thead>
-                                <tr class="text-center">
-                                    <th></th>
-                                    @foreach (array_keys(reset($array)) as $criteria)
-                                        <th>C{{ $criteria }}</th>
-                                    @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($array as $alternative => $criteriaValues)
+                <div class="collapse show" id="nilai-perbandingan">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="table-1">
+                                <thead>
                                     <tr class="text-center">
-                                        <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
-                                        @foreach ($criteriaValues as $value)
-                                            <td>{{ $value }}</td>
+                                        <th></th>
+                                        @foreach (array_keys(reset($array)) as $criteria)
+                                            <th>C{{ $criteria }}</th>
                                         @endforeach
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($array as $alternative => $criteriaValues)
+                                        <tr class="text-center">
+                                            <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
+                                            @foreach ($criteriaValues as $value)
+                                                <td>{{ $value }}</td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,29 +48,35 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Normalisasi Matriks (Tren Positif, Tren Negatif)</h4>
+                    <div class="card-header-action">
+                        <a data-collapse="#normalisasi" class="btn btn-icon btn-info" href="#"><i
+                                class="fas fa-minus"></i></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="table-1">
-                            <thead>
-                                <tr class="text-center">
-                                    <th></th>
-                                    @foreach (array_keys(reset($normalisasi)) as $criteria)
-                                        <th>C{{ $criteria }}</th>
-                                    @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($normalisasi as $alternative => $criteriaValues)
+                <div class="collapse show" id="normalisasi">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="table-1">
+                                <thead>
                                     <tr class="text-center">
-                                        <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
-                                        @foreach ($criteriaValues as $value)
-                                            <td>{{ $value }}</td>
+                                        <th></th>
+                                        @foreach (array_keys(reset($normalisasi)) as $criteria)
+                                            <th>C{{ $criteria }}</th>
                                         @endforeach
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($normalisasi as $alternative => $criteriaValues)
+                                        <tr class="text-center">
+                                            <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
+                                            @foreach ($criteriaValues as $value)
+                                                <td>{{ $value }}</td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,29 +85,35 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Perhitungan Index Alternatif</h4>
+                    <div class="card-header-action">
+                        <a data-collapse="#pembobotan" class="btn btn-icon btn-info" href="#"><i
+                                class="fas fa-minus"></i></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered" id="table-1">
-                            <thead>
-                                <tr class="text-center">
-                                    <th></th>
-                                    @foreach (array_keys(reset($weighting)) as $criteria)
-                                        <th>C{{ $criteria }}</th>
-                                    @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($weighting as $alternative => $criteriaValues)
+                <div class="collapse show" id="pembobotan">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="table-1">
+                                <thead>
                                     <tr class="text-center">
-                                        <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
-                                        @foreach ($criteriaValues as $value)
-                                            <td>{{ $value }}</td>
+                                        <th></th>
+                                        @foreach (array_keys(reset($weighting)) as $criteria)
+                                            <th>C{{ $criteria }}</th>
                                         @endforeach
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($weighting as $alternative => $criteriaValues)
+                                        <tr class="text-center">
+                                            <th>A{{ $alternative }}</th> <!-- Add 'a' here -->
+                                            @foreach ($criteriaValues as $value)
+                                                <td>{{ $value }}</td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
