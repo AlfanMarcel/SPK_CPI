@@ -4,6 +4,8 @@ use App\Http\Controllers\alternatifController;
 use App\Http\Controllers\AValueController;
 use App\Http\Controllers\CpiController;
 use App\Http\Controllers\criteriaController;
+use App\Models\Alternatif;
+use App\Models\Criteria;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +20,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    $alternatif = Alternatif::all()->count();
+    $criteria = Criteria::all()->count();
+    return view('dashboard', compact('alternatif', 'criteria'));
 });
 
 //alternatif
 Route::get('/alternatifs', [alternatifController::class, 'index']);
+Route::get('/alternatif/{id}', [alternatifController::class, 'edit']);
+Route::put('/edit_alternatif/{id}', [alternatifController::class, 'update']);
 
 //criteria
 Route::get('/criterias', [criteriaController::class, 'index']);

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <form method="put" action="/edit_criteria/{{ $criteria->id }}">
+                <form method="post" action="/edit_criteria/{{ $criteria->id }}">
                     @csrf
                     @method('PUT')
                     <div class="card-header">
@@ -30,11 +30,11 @@
                         </div>
                         <div class="form-group">
                             <label>Weight</label>
-                            <input type="number" name="weight" class="form-control" value="{{ $criteria->weight }}">
+                            <input type="text" name="weight" class="form-control" value="{{ $criteria->weight }}">
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary">Submit</button>
+                        <button class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>

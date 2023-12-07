@@ -39,8 +39,8 @@
                                         <td>{{ $alternatif->id }}</td>
                                         <td>{{ $alternatif->name }}</td>
                                         <td>
-                                            <a href="" class="text-warning mr-2"><i class="fas fa-edit"
-                                                    style="font-size: 20px"></i></a>
+                                            <a href="/alternatif/{{ $alternatif->id }}" class="text-warning mr-2"><i
+                                                    class="fas fa-edit" style="font-size: 20px"></i></a>
                                             <a href="" class="text-danger"><i class="fas fa-trash-alt"
                                                     style="font-size: 20px"></i></a>
                                         </td>

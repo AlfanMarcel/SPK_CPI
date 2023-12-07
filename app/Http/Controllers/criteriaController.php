@@ -26,7 +26,7 @@ class criteriaController extends Controller
     public function update(Request $request, $id)
     {
 
-        Criteria::find($id)->update($request);
+        Criteria::find($id)->update($request->all());
 
         return redirect('/criterias');
     }
