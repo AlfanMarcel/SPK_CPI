@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 DB::table('cpi_evaluations')->insert([
                     'alternatif_id' => $i,
                     'criteria_id' => $j,
-                    'value' => 0
+                    'value' => 1
                 ]);
             }
         }

@@ -35,7 +35,7 @@ class alternatifController extends Controller
                 DB::table('cpi_evaluations')->insert([
                     'alternatif_id' => $alternatif->id,
                     'criteria_id' => $i,
-                    'value' => 0
+                    'value' => 1
                 ]);
             }
         } else {

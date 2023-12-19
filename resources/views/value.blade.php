@@ -20,7 +20,7 @@
                                 <div class="col-3 mb-3">
                                     <label for="" class="form-label"
                                         style="font-weight: bold">{{ $criteria->name }}</label>
-                                    <input type="number" class="form-control" id="" min="0"
+                                    <input type="number" class="form-control" id="" min="1"
                                         name="{{ $criteria->id }}" max="100" value="{{ $criteria->pivot->value }}">
                                 </div>
                             @endforeach

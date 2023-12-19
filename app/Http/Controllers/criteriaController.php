@@ -21,7 +21,7 @@ class criteriaController extends Controller
     {
         $weightTotal = Criteria::sum('weight');
 
-        if ($weightTotal == 1) {
+        if ($weightTotal >= 1) {
             return redirect('/criterias')->with('alert', 'Total bobot sudah 100%');
         }
         return view('addCriteria');
@@ -46,7 +46,7 @@ class criteriaController extends Controller
                 DB::table('cpi_evaluations')->insert([
                     'alternatif_id' => $i,
                     'criteria_id' => $criteria->id,
-                    'value' => 0
+                    'value' => 1
                 ]);
             }
         } else {
