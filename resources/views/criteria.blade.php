@@ -7,19 +7,24 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            {{-- @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{ session('success') }}</strong>
-            </div>
-        @endif
-        @if (session()->has('updateSuccess'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{ session('updateSuccess') }}</strong>
-            </div>
-        @endif --}}
+            @if (session()->has('false'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{ session('false') }}</strong>
+                </div>
+            @endif
+            @if (session()->has('true'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ session('true') }}</strong>
+                </div>
+            @endif
+            @if (session()->has('alert'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ session('alert') }}</strong>
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header">
-                    <a href="" class="btn btn-primary">Tambah</a>
+                    <a href="/criteria/form_add" class="btn btn-primary">Tambah</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

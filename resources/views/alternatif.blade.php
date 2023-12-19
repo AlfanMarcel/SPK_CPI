@@ -7,19 +7,19 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            {{-- @if (session()->has('success'))
+            @if (session()->has('false'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>{{ session('success') }}</strong>
+                    <strong>{{ session('false') }}</strong>
                 </div>
             @endif
-            @if (session()->has('updateSuccess'))
+            @if (session()->has('true'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>{{ session('updateSuccess') }}</strong>
+                    <strong>{{ session('true') }}</strong>
                 </div>
-            @endif --}}
+            @endif
             <div class="card">
                 <div class="card-header">
-                    <a href="" class="btn btn-primary">Tambah</a>
+                    <a href="/alternatif/form_add" class="btn btn-primary">Tambah</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

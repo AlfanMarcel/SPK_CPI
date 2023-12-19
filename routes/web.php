@@ -27,11 +27,15 @@ Route::get('/', function () {
 
 //alternatif
 Route::get('/alternatifs', [alternatifController::class, 'index']);
+Route::post('/add_alternatif', [alternatifController::class, 'store']);
+Route::get('/alternatif/form_add', [alternatifController::class, 'create']);
 Route::get('/alternatif/{id}', [alternatifController::class, 'edit']);
 Route::put('/edit_alternatif/{id}', [alternatifController::class, 'update']);
 
 //criteria
 Route::get('/criterias', [criteriaController::class, 'index']);
+Route::post('/add_criteria', [CriteriaController::class, 'store']);
+Route::get('/criteria/form_add', [criteriaController::class, 'create']);
 Route::get('/criteria/{id}', [criteriaController::class, 'edit']);
 Route::put('/edit_criteria/{id}', [criteriaController::class, 'update']);
 
